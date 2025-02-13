@@ -1,0 +1,169 @@
+{
+  "pages": [
+    {
+      "path": "pages/message/message",
+      "style": {
+        "navigationBarTitleText": "微信"
+      }
+    },
+    {
+      "path": "pages/chat/chat",
+      "style": {
+        "navigationBarTitleText": "聊天"
+      }
+    },
+    {
+      "path": "pages/contacts/contacts",
+      "style": {
+        "navigationBarTitleText": "通讯录"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/contact-detail/contact-detail",
+      "style": {
+        "navigationBarTitleText": "联系人信息"
+      }
+    },
+    {
+      "path": "pages/discover/discover",
+      "style": {
+        "navigationBarTitleText": "发现"
+      }
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "我"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/discover",
+      "pages": [
+        {
+          "path": "moments/moments",
+          "style": {
+            "navigationBarTitleText": "朋友圈"
+          }
+        },
+        {
+          "path": "moments/publish/publish",
+          "style": {
+            "navigationBarTitleText": "发表"
+          }
+        },
+        {
+          "path": "video/video",
+          "style": {
+            "navigationBarTitleText": "视频号"
+          }
+        },
+        {
+          "path": "live/live",
+          "style": {
+            "navigationBarTitleText": "直播"
+          }
+        },
+        {
+          "path": "game/game",
+          "style": {
+            "navigationBarTitleText": "游戏"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/profile",
+      "pages": [
+        {
+          "path": "user-info/user-info",
+          "style": {
+            "navigationBarTitleText": "个人信息"
+          }
+        },
+        {
+          "path": "payment/payment",
+          "style": {
+            "navigationBarTitleText": "支付"
+          }
+        },
+        {
+          "path": "collect/collect",
+          "style": {
+            "navigationBarTitleText": "收藏"
+          }
+        },
+        {
+          "path": "album/album",
+          "style": {
+            "navigationBarTitleText": "相册"
+          }
+        },
+        {
+          "path": "card/card",
+          "style": {
+            "navigationBarTitleText": "卡包"
+          }
+        },
+        {
+          "path": "emoji/emoji",
+          "style": {
+            "navigationBarTitleText": "表情"
+          }
+        },
+        {
+          "path": "settings/settings",
+          "style": {
+            "navigationBarTitleText": "设置"
+          }
+        }
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "微信",
+    "navigationBarBackgroundColor": "#EDEDED",
+    "backgroundColor": "#EDEDED"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#07C160",
+    "borderStyle": "black",
+    "backgroundColor": "#F7F7F7",
+    "list": [
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "static/tabbar/message.png",
+        "selectedIconPath": "static/tabbar/message-active.png",
+        "text": "微信"
+      },
+      {
+        "pagePath": "pages/contacts/contacts",
+        "iconPath": "static/tabbar/contacts.png",
+        "selectedIconPath": "static/tabbar/contacts-active.png",
+        "text": "通讯录"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "iconPath": "static/tabbar/moments.png",
+        "selectedIconPath": "static/tabbar/moments-active.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "static/tabbar/profile.png",
+        "selectedIconPath": "static/tabbar/profile-active.png",
+        "text": "我"
+      }
+    ]
+  }
+}
