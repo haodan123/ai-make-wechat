@@ -103,8 +103,8 @@ const liveList = ref([
     id: 1,
     title: '新年倒计时直播',
     streamer: '张三',
-    avatar: '/static/avatar/default.png',
-    cover: '/static/live/cover1.png',
+    avatar: 'https://picsum.photos/100?random=19',
+    cover: 'https://picsum.photos/300?random=20',
     streamUrl: 'rtmp://example.com/live/stream1',
     viewers: '2.3w',
     tag: '娱乐'
@@ -113,8 +113,8 @@ const liveList = ref([
     id: 2,
     title: '美食探店直播',
     streamer: '李四',
-    avatar: '/static/avatar/default.png',
-    cover: '/static/live/cover2.png',
+    avatar: 'https://picsum.photos/100?random=21',
+    cover: 'https://picsum.photos/300?random=22',
     streamUrl: 'rtmp://example.com/live/stream2',
     viewers: '1.5w',
     tag: '美食'

@@ -77,6 +77,24 @@
           "style": {
             "navigationBarTitleText": "游戏"
           }
+        },
+        {
+          "path": "game/landlord/landlord",
+          "style": {
+            "navigationBarTitleText": "欢乐斗地主"
+          }
+        },
+        {
+          "path": "game/jump/jump",
+          "style": {
+            "navigationBarTitleText": "跳一跳"
+          }
+        },
+        {
+          "path": "game/puzzle/puzzle",
+          "style": {
+            "navigationBarTitleText": "消消乐"
+          }
         }
       ]
     },
@@ -102,6 +120,42 @@
           }
         },
         {
+          "path": "settings/settings",
+          "style": {
+            "navigationBarTitleText": "设置"
+          }
+        },
+        {
+          "path": "settings/account-security/account-security",
+          "style": {
+            "navigationBarTitleText": "账号与安全"
+          }
+        },
+        {
+          "path": "settings/privacy/privacy",
+          "style": {
+            "navigationBarTitleText": "隐私"
+          }
+        },
+        {
+          "path": "settings/notification/notification",
+          "style": {
+            "navigationBarTitleText": "新消息通知"
+          }
+        },
+        {
+          "path": "settings/display/display",
+          "style": {
+            "navigationBarTitleText": "界面显示"
+          }
+        },
+        {
+          "path": "settings/about/about",
+          "style": {
+            "navigationBarTitleText": "关于微信"
+          }
+        },
+        {
           "path": "album/album",
           "style": {
             "navigationBarTitleText": "相册"
@@ -117,12 +171,6 @@
           "path": "emoji/emoji",
           "style": {
             "navigationBarTitleText": "表情"
-          }
-        },
-        {
-          "path": "settings/settings",
-          "style": {
-            "navigationBarTitleText": "设置"
           }
         }
       ]
@@ -142,26 +190,26 @@
     "list": [
       {
         "pagePath": "pages/message/message",
-        "iconPath": "static/tabbar/message.png",
-        "selectedIconPath": "static/tabbar/message-active.png",
+        "iconPath": "https://picsum.photos/100?random=1",
+        "selectedIconPath": "https://picsum.photos/100?random=2",
         "text": "微信"
       },
       {
         "pagePath": "pages/contacts/contacts",
-        "iconPath": "static/tabbar/contacts.png",
-        "selectedIconPath": "static/tabbar/contacts-active.png",
+        "iconPath": "https://picsum.photos/100?random=3",
+        "selectedIconPath": "https://picsum.photos/100?random=4",
         "text": "通讯录"
       },
       {
         "pagePath": "pages/discover/discover",
-        "iconPath": "static/tabbar/moments.png",
-        "selectedIconPath": "static/tabbar/moments-active.png",
+        "iconPath": "https://picsum.photos/100?random=5",
+        "selectedIconPath": "https://picsum.photos/100?random=6",
         "text": "发现"
       },
       {
         "pagePath": "pages/profile/profile",
-        "iconPath": "static/tabbar/profile.png",
-        "selectedIconPath": "static/tabbar/profile-active.png",
+        "iconPath": "https://picsum.photos/100?random=7",
+        "selectedIconPath": "https://picsum.photos/100?random=8",
         "text": "我"
       }
     ]

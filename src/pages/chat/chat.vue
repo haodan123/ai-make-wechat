@@ -107,14 +107,14 @@ const messageList = ref([
   {
     id: 1,
     content: '你好，最近怎么样？',
-    avatar: '/static/avatar/default.png',
+    avatar: 'https://picsum.photos/100?random=18',
     isSelf: false,
     time: '10:30'
   },
   {
     id: 2,
     content: '挺好的，你呢？',
-    avatar: '/static/avatar/default.png',
+    avatar: 'https://picsum.photos/100?random=18',
     isSelf: true,
     time: '10:31'
   }
@@ -163,7 +163,7 @@ const chooseImage = () => {
         id: Date.now(),
         type: 'image',
         content: tempFilePath,
-        avatar: '/static/avatar/default.png',
+        avatar: 'https://picsum.photos/100?random=18',
         isSelf: true,
         time: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
       })
@@ -179,7 +179,7 @@ const sendMessage = () => {
     id: Date.now(),
     type: 'text',
     content: inputMessage.value,
-    avatar: '/static/avatar/default.png',
+    avatar: 'https://picsum.photos/100?random=18',
     isSelf: true,
     time: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
   })
@@ -231,7 +231,7 @@ const stopVoiceRecord = () => {
         id: Date.now(),
         type: 'voice',
         content: res.tempFilePath,
-        avatar: '/static/avatar/default.png',
+        avatar: 'https://picsum.photos/100?random=18',
         isSelf: true,
         time: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
       })
@@ -264,7 +264,7 @@ const chooseFile = () => {
         id: Date.now(),
         type: 'file',
         content: tempFilePath,
-        avatar: '/static/avatar/default.png',
+        avatar: 'https://picsum.photos/100?random=18',
         isSelf: true,
         time: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
       })
@@ -285,7 +285,7 @@ const openLocation = () => {
         id: Date.now(),
         type: 'location',
         content: JSON.stringify(res),
-        avatar: '/static/avatar/default.png',
+        avatar: 'https://picsum.photos/100?random=18',
         isSelf: true,
         time: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
       })

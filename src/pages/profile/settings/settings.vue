@@ -50,51 +50,55 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 // 账号与安全
 const handleAccountSecurity = () => {
-  uni.showToast({
-    title: '账号与安全功能开发中',
-    icon: 'none'
+  uni.navigateTo({
+    url: '/pages/profile/settings/account-security/account-security'
   })
 }
 
 // 隐私设置
 const handlePrivacy = () => {
-  uni.showToast({
-    title: '隐私设置功能开发中',
-    icon: 'none'
+  uni.navigateTo({
+    url: '/pages/profile/settings/privacy/privacy'
   })
 }
 
 // 新消息通知
 const handleNotification = () => {
-  uni.showToast({
-    title: '通知设置功能开发中',
-    icon: 'none'
+  uni.navigateTo({
+    url: '/pages/profile/settings/notification/notification'
   })
 }
 
 // 界面显示
 const handleDisplay = () => {
-  uni.showToast({
-    title: '界面设置功能开发中',
-    icon: 'none'
+  uni.navigateTo({
+    url: '/pages/profile/settings/display/display'
   })
 }
 
 // 语言设置
 const handleLanguage = () => {
-  uni.showToast({
-    title: '语言设置功能开发中',
-    icon: 'none'
+  uni.showActionSheet({
+    itemList: ['简体中文', 'English', '日本語'],
+    success: function (res) {
+      const languages = ['简体中文', 'English', '日本語']
+      const selectedLanguage = languages[res.tapIndex]
+      uni.showToast({
+        title: `已切换为${selectedLanguage}`,
+        icon: 'success'
+      })
+    }
   })
 }
 
 // 关于
 const handleAbout = () => {
-  uni.showToast({
-    title: '关于页面开发中',
-    icon: 'none'
+  uni.navigateTo({
+    url: '/pages/profile/settings/about/about'
   })
 }
 
@@ -105,8 +109,18 @@ const handleLogout = () => {
     content: '确定要退出登录吗？',
     success: (res) => {
       if (res.confirm) {
-        uni.navigateTo({
+        // 清除用户登录状态
+        uni.removeStorageSync('userInfo')
+        uni.removeStorageSync('token')
+        
+        // 重定向到登录页
+        uni.reLaunch({
           url: '/pages/login/login'
+        })
+        
+        uni.showToast({
+          title: '已退出登录',
+          icon: 'success'
         })
       }
     }

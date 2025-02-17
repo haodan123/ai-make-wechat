@@ -8,7 +8,7 @@
 
     <!-- Logo -->
     <view class="logo-section">
-      <image class="logo" src="/static/logo.png" mode="aspectFit" />
+      <image class="logo" src="https://picsum.photos/200?random=11" mode="aspectFit" />
       <text class="app-name">微信</text>
     </view>
 
@@ -162,7 +162,7 @@ const loginSuccess = () => {
   uni.setStorageSync('userInfo', {
     id: 'user_' + Date.now(),
     name: '微信用户',
-    avatar: '/static/avatar/default.png'
+    avatar: 'https://picsum.photos/100?random=12'
   })
 
   // 跳转到首页

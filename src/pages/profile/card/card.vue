@@ -56,7 +56,7 @@ const cards = ref([
   {
     id: 1,
     name: '星巴克会员卡',
-    logo: '/static/images/card/starbucks.png',
+    logo: 'https://picsum.photos/300?random=36',
     number: '**** **** **** 1234',
     validDate: '2025-12-31',
     bgColor: '#00704A'
@@ -64,7 +64,7 @@ const cards = ref([
   {
     id: 2,
     name: '麦当劳会员卡',
-    logo: '/static/images/card/mcdonalds.png',
+    logo: 'https://picsum.photos/300?random=37',
     number: '**** **** **** 5678',
     validDate: '2025-12-31',
     bgColor: '#FFC72C'

@@ -63,10 +63,23 @@ const handleImageError = (game) => {
 
 // 开始游戏
 const playGame = (gameId) => {
-  uni.showToast({
-    title: '游戏即将开始',
-    icon: 'success'
-  })
+  // 根据游戏ID跳转到对应的游戏页面
+  const gamePages = {
+    1: '/pages/discover/game/landlord/landlord',
+    2: '/pages/discover/game/jump/jump',
+    3: '/pages/discover/game/puzzle/puzzle'
+  }
+
+  if (gamePages[gameId]) {
+    uni.navigateTo({
+      url: gamePages[gameId]
+    })
+  } else {
+    uni.showToast({
+      title: '游戏正在开发中',
+      icon: 'none'
+    })
+  }
 }
 </script>
 

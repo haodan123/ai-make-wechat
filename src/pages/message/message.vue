@@ -1,6 +1,7 @@
 <template>
   <view class="message-page" @tap="handlePageTap">
-    <view class="message-list">
+    <scroll-view class="message-list" scroll-y refresher-enabled :refresher-triggered="isRefreshing" @refresherrefresh="onRefresh" @scrolltolower="onLoadMore">
+      <view class="refresh-text" v-if="isRefreshing">正在刷新...</view>
       <view v-for="chat in sortedChatList" :key="chat.id" class="chat-item" @tap="navigateToChat(chat)" :class="{ 'slide-left': chat.isSlide, 'pinned': chat.isPinned }" @touchstart="touchStart($event, chat)" @touchmove="touchMove($event, chat)" @touchend="touchEnd(chat)">
         <view class="chat-content">
           <view class="avatar">
@@ -30,7 +31,13 @@
           </view>
         </view>
       </view>
-    </view>
+      <view class="loading-more" v-if="isLoadingMore">
+        <text>加载中...</text>
+      </view>
+      <view class="no-more" v-if="noMoreData">
+        <text>没有更多数据了</text>
+      </view>
+    </scroll-view>
 
     <!-- 快捷操作按钮 -->
     <view class="quick-actions">
@@ -48,14 +55,21 @@
 </template>
 
 <script setup>
-import { ref,computed } from 'vue'
+import { ref, computed } from 'vue'
+
+// 分页和加载状态
+const pageSize = 10
+const currentPage = ref(1)
+const isRefreshing = ref(false)
+const isLoadingMore = ref(false)
+const noMoreData = ref(false)
 
 // 聊天列表数据
 const chatList = ref([
   {
     id: 1,
     name: '张三',
-    avatar: '/static/avatar/default.png',
+    avatar: 'https://picsum.photos/100?random=13',
     lastMessage: '你好，最近怎么样？',
     lastTime: '上午 10:30',
     unread: 2,
@@ -66,7 +80,7 @@ const chatList = ref([
   {
     id: 2,
     name: '微信团队',
-    avatar: '/static/avatar/wechat.png',
+    avatar: 'https://picsum.photos/100?random=14',
     lastMessage: '欢迎使用微信',
     lastTime: '昨天',
     unread: 0,
@@ -76,7 +90,7 @@ const chatList = ref([
   {
     id: 3,
     name: '朋友群',
-    avatar: '/static/avatar/group.png',
+    avatar: 'https://picsum.photos/100?random=15',
     lastMessage: '[张三]: 周末一起吃饭？',
     lastTime: '昨天',
     unread: 5,
@@ -196,6 +210,81 @@ const createGroup = () => {
     icon: 'none'
   })
 }
+
+// 下拉刷新
+const onRefresh = async () => {
+  try {
+    isRefreshing.value = true
+    // 模拟数据刷新
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    // 重置分页状态
+    currentPage.value = 1
+    noMoreData.value = false
+    
+    // 模拟新数据
+    chatList.value = [
+      {
+        id: Math.random(),
+        name: '新消息',
+        avatar: 'https://picsum.photos/100?random=' + Math.floor(Math.random() * 100),
+        lastMessage: '新的聊天消息',
+        lastTime: '刚刚',
+        unread: 1,
+        type: 'single',
+        isSlide: false,
+        isPinned: false
+      },
+      ...chatList.value.slice(0, 5)
+    ]
+  } catch (error) {
+    uni.showToast({
+      title: '刷新失败',
+      icon: 'none'
+    })
+  } finally {
+    isRefreshing.value = false
+  }
+}
+
+// 上滑加载更多
+const onLoadMore = async () => {
+  if (isLoadingMore.value || noMoreData.value) return
+  
+  try {
+    isLoadingMore.value = true
+    // 模拟加载延迟
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    // 模拟加载更多数据
+    const moreData = Array(3).fill(0).map((_, index) => ({
+      id: Math.random(),
+      name: `联系人 ${currentPage.value * pageSize + index + 1}`,
+      avatar: `https://picsum.photos/100?random=${Math.floor(Math.random() * 100)}`,
+      lastMessage: '历史消息...',
+      lastTime: '更早',
+      unread: 0,
+      type: 'single',
+      isSlide: false,
+      isPinned: false
+    }))
+    
+    chatList.value = [...chatList.value, ...moreData]
+    currentPage.value++
+    
+    // 模拟数据加载完毕
+    if (currentPage.value >= 4) {
+      noMoreData.value = true
+    }
+  } catch (error) {
+    uni.showToast({
+      title: '加载失败',
+      icon: 'none'
+    })
+  } finally {
+    isLoadingMore.value = false
+  }
+}
 </script>
 
 <style lang="scss">
@@ -213,37 +302,25 @@ const createGroup = () => {
   padding: 20rpx;
   transition: background-color 0.3s ease;
 
-  &.dark-mode {
-    --bg-gradient: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-
-    .chat-item {
-      background: rgba(40, 40, 40, 0.8);
-      box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.2);
-
-      .name {
-        color: #ffffff;
-      }
-
-      .text {
-        color: #cccccc;
-      }
-
-      .time {
-        color: #888888;
-      }
-    }
-
-    .action-btn {
-      background: rgba(40, 40, 40, 0.9);
-      box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.2);
-
-      .iconfont {
-        color: #07C160;
-      }
-    }
-  }
-
   .message-list {
+    height: calc(100vh - 40rpx);
+    position: relative;
+
+    .refresh-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      padding: 20rpx;
+      text-align: center;
+      color: #666;
+      font-size: 24rpx;
+      transition: all 0.3s ease;
+    }
+
     .chat-item {
       position: relative;
       transform: translateY(20rpx);
@@ -251,14 +328,11 @@ const createGroup = () => {
       animation: slideIn 0.3s ease forwards;
       overflow: hidden;
       margin-bottom: 20rpx;
+      will-change: transform;
 
-
-      @for $i from 1 through 10 {
-        &:nth-child(#{$i}) {
-          animation-delay: #{$i * 0.05}s;
-        }
+      &.slide-left {
+        z-index: 1;
       }
-
       .chat-content {
         display: flex;
         padding: 24rpx;
@@ -443,5 +517,14 @@ const createGroup = () => {
     transform: translateY(0);
     opacity: 1;
   }
+}
+.message-page,
+.refresh-text,
+.loading-more,
+.no-more {
+  text-align: center;
+  padding: 20rpx;
+  color: #999;
+  font-size: 24rpx;
 }
 </style>

@@ -66,13 +66,13 @@ const albums = ref([
   {
     id: 1,
     name: '我的相册',
-    cover: '/static/images/album-cover.png',
+    cover: 'https://picsum.photos/300?random=32',
     count: 24
   },
   {
     id: 2,
     name: '朋友圈相册',
-    cover: '/static/images/moments-cover.png',
+    cover: 'https://picsum.photos/300?random=33',
     count: 56
   }
 ])
@@ -81,12 +81,12 @@ const albums = ref([
 const photos = ref([
   {
     id: 1,
-    url: '/static/images/photo1.png',
+    url: 'https://picsum.photos/300?random=34',
     type: 'image'
   },
   {
     id: 2,
-    url: '/static/images/video-cover.png',
+    url: 'https://picsum.photos/300?random=35',
     type: 'video'
   }
 ])

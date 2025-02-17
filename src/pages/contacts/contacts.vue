@@ -88,194 +88,194 @@ const contactGroups = ref([
   {
     letter: 'A',
     list: [
-      { id: 1, name: 'Alice', avatar: '/static/avatar/default.png' },
-      { id: 2, name: 'Andy', avatar: '/static/avatar/default.png' },
-      { id: 3, name: 'Alex', avatar: '/static/avatar/default.png' },
-      { id: 4, name: 'Anna', avatar: '/static/avatar/default.png' },
-      { id: 53, name: 'Aaron', avatar: '/static/avatar/default.png' },
-      { id: 54, name: 'Amber', avatar: '/static/avatar/default.png' },
-      { id: 55, name: 'Adrian', avatar: '/static/avatar/default.png' },
-      { id: 56, name: 'Amanda', avatar: '/static/avatar/default.png' }
+      { id: 1, name: 'Alice', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 2, name: 'Andy', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 3, name: 'Alex', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 4, name: 'Anna', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 53, name: 'Aaron', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 54, name: 'Amber', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 55, name: 'Adrian', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 56, name: 'Amanda', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'B',
     list: [
-      { id: 5, name: 'Bob', avatar: '/static/avatar/default.png' },
-      { id: 6, name: 'Bill', avatar: '/static/avatar/default.png' },
-      { id: 7, name: 'Bruce', avatar: '/static/avatar/default.png' },
-      { id: 57, name: 'Benjamin', avatar: '/static/avatar/default.png' },
-      { id: 58, name: 'Bella', avatar: '/static/avatar/default.png' },
-      { id: 59, name: 'Brian', avatar: '/static/avatar/default.png' },
-      { id: 60, name: 'Betty', avatar: '/static/avatar/default.png' }
+      { id: 5, name: 'Bob', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 6, name: 'Bill', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 7, name: 'Bruce', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 57, name: 'Benjamin', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 58, name: 'Bella', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 59, name: 'Brian', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 60, name: 'Betty', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'C',
     list: [
-      { id: 8, name: 'Charlie', avatar: '/static/avatar/default.png' },
-      { id: 9, name: 'Catherine', avatar: '/static/avatar/default.png' }
+      { id: 8, name: 'Charlie', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 9, name: 'Catherine', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'D',
     list: [
-      { id: 10, name: 'David', avatar: '/static/avatar/default.png' },
-      { id: 11, name: 'Daniel', avatar: '/static/avatar/default.png' }
+      { id: 10, name: 'David', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 11, name: 'Daniel', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'E',
     list: [
-      { id: 12, name: 'Emma', avatar: '/static/avatar/default.png' },
-      { id: 13, name: 'Eric', avatar: '/static/avatar/default.png' }
+      { id: 12, name: 'Emma', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 13, name: 'Eric', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'F',
     list: [
-      { id: 14, name: 'Frank', avatar: '/static/avatar/default.png' },
-      { id: 15, name: 'Fiona', avatar: '/static/avatar/default.png' }
+      { id: 14, name: 'Frank', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 15, name: 'Fiona', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'G',
     list: [
-      { id: 16, name: 'George', avatar: '/static/avatar/default.png' },
-      { id: 17, name: 'Grace', avatar: '/static/avatar/default.png' }
+      { id: 16, name: 'George', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 17, name: 'Grace', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'H',
     list: [
-      { id: 18, name: 'Henry', avatar: '/static/avatar/default.png' },
-      { id: 19, name: 'Hannah', avatar: '/static/avatar/default.png' }
+      { id: 18, name: 'Henry', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 19, name: 'Hannah', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'I',
     list: [
-      { id: 20, name: 'Ian', avatar: '/static/avatar/default.png' },
-      { id: 21, name: 'Iris', avatar: '/static/avatar/default.png' }
+      { id: 20, name: 'Ian', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 21, name: 'Iris', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'J',
     list: [
-      { id: 22, name: 'Jack', avatar: '/static/avatar/default.png' },
-      { id: 23, name: 'Julia', avatar: '/static/avatar/default.png' }
+      { id: 22, name: 'Jack', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 23, name: 'Julia', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'K',
     list: [
-      { id: 24, name: 'Kevin', avatar: '/static/avatar/default.png' },
-      { id: 25, name: 'Kate', avatar: '/static/avatar/default.png' }
+      { id: 24, name: 'Kevin', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 25, name: 'Kate', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'L',
     list: [
-      { id: 26, name: 'Leo', avatar: '/static/avatar/default.png' },
-      { id: 27, name: 'Lucy', avatar: '/static/avatar/default.png' }
+      { id: 26, name: 'Leo', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 27, name: 'Lucy', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'M',
     list: [
-      { id: 28, name: 'Mike', avatar: '/static/avatar/default.png' },
-      { id: 29, name: 'Mary', avatar: '/static/avatar/default.png' }
+      { id: 28, name: 'Mike', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 29, name: 'Mary', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'N',
     list: [
-      { id: 30, name: 'Nick', avatar: '/static/avatar/default.png' },
-      { id: 31, name: 'Nancy', avatar: '/static/avatar/default.png' }
+      { id: 30, name: 'Nick', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 31, name: 'Nancy', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'O',
     list: [
-      { id: 32, name: 'Oliver', avatar: '/static/avatar/default.png' },
-      { id: 33, name: 'Olivia', avatar: '/static/avatar/default.png' }
+      { id: 32, name: 'Oliver', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 33, name: 'Olivia', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'P',
     list: [
-      { id: 34, name: 'Peter', avatar: '/static/avatar/default.png' },
-      { id: 35, name: 'Penny', avatar: '/static/avatar/default.png' }
+      { id: 34, name: 'Peter', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 35, name: 'Penny', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'Q',
     list: [
-      { id: 36, name: 'Quinn', avatar: '/static/avatar/default.png' }
+      { id: 36, name: 'Quinn', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'R',
     list: [
-      { id: 37, name: 'Ryan', avatar: '/static/avatar/default.png' },
-      { id: 38, name: 'Rachel', avatar: '/static/avatar/default.png' }
+      { id: 37, name: 'Ryan', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 38, name: 'Rachel', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'S',
     list: [
-      { id: 39, name: 'Sam', avatar: '/static/avatar/default.png' },
-      { id: 40, name: 'Sarah', avatar: '/static/avatar/default.png' }
+      { id: 39, name: 'Sam', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 40, name: 'Sarah', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'T',
     list: [
-      { id: 41, name: 'Tom', avatar: '/static/avatar/default.png' },
-      { id: 42, name: 'Tina', avatar: '/static/avatar/default.png' }
+      { id: 41, name: 'Tom', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 42, name: 'Tina', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'U',
     list: [
-      { id: 43, name: 'Uma', avatar: '/static/avatar/default.png' }
+      { id: 43, name: 'Uma', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'V',
     list: [
-      { id: 44, name: 'Victor', avatar: '/static/avatar/default.png' },
-      { id: 45, name: 'Victoria', avatar: '/static/avatar/default.png' }
+      { id: 44, name: 'Victor', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 45, name: 'Victoria', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'W',
     list: [
-      { id: 46, name: 'William', avatar: '/static/avatar/default.png' },
-      { id: 47, name: 'Wendy', avatar: '/static/avatar/default.png' }
+      { id: 46, name: 'William', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 47, name: 'Wendy', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'X',
     list: [
-      { id: 48, name: 'Xavier', avatar: '/static/avatar/default.png' }
+      { id: 48, name: 'Xavier', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'Y',
     list: [
-      { id: 49, name: 'Yolanda', avatar: '/static/avatar/default.png' },
-      { id: 50, name: 'Yuki', avatar: '/static/avatar/default.png' }
+      { id: 49, name: 'Yolanda', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 50, name: 'Yuki', avatar: 'https://picsum.photos/100?random=10' }
     ]
   },
   {
     letter: 'Z',
     list: [
-      { id: 51, name: 'Zack', avatar: '/static/avatar/default.png' },
-      { id: 52, name: 'Zoe', avatar: '/static/avatar/default.png' },
-      { id: 61, name: 'Zachary', avatar: '/static/avatar/default.png' },
-      { id: 62, name: 'Zelda', avatar: '/static/avatar/default.png' },
-      { id: 63, name: 'Zeus', avatar: '/static/avatar/default.png' }
+      { id: 51, name: 'Zack', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 52, name: 'Zoe', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 61, name: 'Zachary', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 62, name: 'Zelda', avatar: 'https://picsum.photos/100?random=10' },
+      { id: 63, name: 'Zeus', avatar: 'https://picsum.photos/100?random=10' }
     ]
   }
 ])

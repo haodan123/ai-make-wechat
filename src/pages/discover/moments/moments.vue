@@ -95,11 +95,11 @@ const momentsList = ref([
   {
     id: 1,
     name: '张三',
-    avatar: '/static/avatar/default.png',
+    avatar: 'https://picsum.photos/100?random=29',
     content: '今天天气真好！',
     images: [
-      '/static/moments/sample1.png',
-      '/static/moments/sample2.png'
+      'https://picsum.photos/300?random=30',
+      'https://picsum.photos/300?random=31'
     ],
     video: null,
     time: '10分钟前',

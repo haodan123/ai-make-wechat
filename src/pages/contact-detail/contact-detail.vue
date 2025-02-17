@@ -71,7 +71,7 @@ const isDarkMode = ref(false)
 
 // 联系人信息
 const contactInfo = ref({
-  avatar: '/static/avatar/default.png',
+  avatar: 'https://picsum.photos/100?random=16',
   name: '',
   gender: 'male',
   wxId: '',
@@ -85,12 +85,12 @@ const fetchContactInfo = (id) => {
   // 这里模拟从服务器获取数据
   // 实际开发中应该调用API获取数据
   contactInfo.value = {
-    avatar: '/static/avatar/default.png',
+    avatar: 'https://picsum.photos/100?random=16',
     name: 'John Doe',
     gender: 'male',
     wxId: 'johndoe123',
     region: '广东 深圳',
-    latestMoment: '/static/moments/latest.jpg',
+    latestMoment: 'https://picsum.photos/300?random=17',
     isStarred: false
   }
 }
